@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class WordReverser {
 
@@ -14,14 +17,26 @@ public class WordReverser {
             // Well done, that was not that hard
     }
 
-    public static String reverseWords(String s){  //Reversing words
+    public static String reverseWords(String word){
 
-        String reverse = "";
-        for (int i = s.length() - 1; i >= 0; i--) {
-            reverse = reverse + s.charAt(i);
+        int length = word.length();
+        String rev = "";
+        String temp = "";
+
+        for (int i = 0; i < length ; i++) { //
+            temp += word.charAt(i); // Adding the letter in the
+            if((word.charAt(i) == ' ') || (i == length)) {
+                for (int j = temp.length()-1; j >= 0; j--) { // Reversing
+                    rev += temp.charAt(j);
+                    if ((j == 0) && (i != length))
+                        rev += "";
+                }
+                temp = "";
+            }
         }
-        return reverse;
-
+        return rev;
+                
     }
-
 }
+
+
