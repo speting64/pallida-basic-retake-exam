@@ -1,5 +1,30 @@
 public class PokeBag {
+
+    String name;
+    String voice;
+    int HP;
+    int SP;
+
+    public PokeBag(String name,String voice,int HP,int SP){
+
+        this.name = name;
+        this.voice = voice;
+        this.HP= HP;
+        this.SP = (int)(1+Math.random()*10);
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String speak(){
+
+        return  "" + voice + "";
+
+    }
+
     public static void main(String[] args) {
+
         // Create a PokeBag class that can store multiple pokemons from different types. Add 5 pokemons to your PokeBag.
         // There are 3 kind of pomenons:
         // - Pikachu, who says “Pika-pika” and has 12 HP (health point)

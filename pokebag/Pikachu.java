@@ -1,15 +1,14 @@
-public class Pikachu {
+public class Pikachu extends PokeBag {
 
-    String sound;
-    int HP;
-    int SP;
-
-    public Pikachu (String sound, int HP , int SP){
-
-        this.sound = "Pika-pika";
-
-
-
-
+    public Pikachu(String name){
+        this.name = name;
+        this.voice = "pika-pika";
+        this.HP = 12;
+        this.SP = 10;
     }
+
+
+
+
+
 }
