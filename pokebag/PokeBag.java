@@ -5,7 +5,7 @@ public class PokeBag {
     int HP;
     int SP;
 
-    public PokeBag(String name,String voice,int HP,int SP){
+    public PokeBag(String name){
 
         this.name = name;
         this.voice = voice;
@@ -18,12 +18,17 @@ public class PokeBag {
     }
 
     public String speak(){
-
         return  "" + voice + "";
+    }
+
+    public void add(){
 
     }
 
     public static void main(String[] args) {
+
+        PokeBag pokeBag = new PokeBag("Pikachu");
+
 
         // Create a PokeBag class that can store multiple pokemons from different types. Add 5 pokemons to your PokeBag.
         // There are 3 kind of pomenons:

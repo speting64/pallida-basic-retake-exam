@@ -33,10 +33,19 @@ The application is accepted if:
 ###  What is inheritance? When would you use it? [2p]
 
 Inheritance in Java is a mechanism in which one object acquires every proprties (fields) and behaviors(methods) of the parent object. When you inherit from an existing class, you can reuse methods and fields of parent class, and you can add new methods and fields also. We use this solution : 
+
 a. for method overiding
 b. for code reusability
 
 The inheritance is initiated by the "extends" keyword , with which we can derive from an existing class when we create a new subclass
+
+Types of inheritance:
+
+a. SIngle Inheritance :a class extending another one
+b. Multiple Inheritance : class extending more the one base, this time we have to manage the dependency of two classes
+c. Multilevel Inheritance : one can inherit from a derived class, thereby making this derived class the base class for the new class.
+d. Hierarchical Inheritance : one class is inherited by multiple subclasses
+e. Hybrid Inheritance 
 
 ### Name each building block of a method! [2p]
 

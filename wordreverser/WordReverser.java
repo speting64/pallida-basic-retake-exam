@@ -19,7 +19,7 @@ public class WordReverser {
 
     public static String reverseWords(String word){
 
-        int length = word.length();
+        int length = word.length()-1;
         String rev = "";
         String temp = "";
 

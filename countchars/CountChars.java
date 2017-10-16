@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.HashMap;
-
+import java.util.List;
 
 public class CountChars {
     public static void main(String[] args) {
@@ -15,9 +15,9 @@ public class CountChars {
         // For example:
         //
          Map<String, Integer> countedLetters = countLetters("da_vinci_code.txt");
-        // System.out.println("0 occured " + countedLetters.get("0") + " times in the file.");
-        // System.out.println("1 occured " + countedLetters.get("1") + " times in the file.");
-        // System.out.println("x occured " + countedLetters.get("x") + " times in the file.");
+         System.out.println("0 occured " + countedLetters.get("0") + " times in the file.");
+         System.out.println("1 occured " + countedLetters.get("1") + " times in the file.");
+         System.out.println("x occured " + countedLetters.get("x") + " times in the file.");
         //
         // Should print:
         // 0 occured 3393 times in the file.
@@ -28,17 +28,22 @@ public class CountChars {
     public static Map <String,Integer> countLetters(String path){
 
         Map<String,Integer> charFreq = new HashMap<String,Integer>();
+
         try {
-            Path filePath = Paths.get(fileName);
+            Path filePath = Paths.get("src/da_vinci_code.txt");
             List<String> lines = Files.readAllLines(filePath);
-            numberOfLines = lines.size();
-        } catch (IOException ex) {
-            return 0;
+            for (String word : lines) {
+                if (charFreq.containsKey(word))  // If the map contains the vlaue , increase count
+                    charFreq.put(word, charFreq.get(word) + 1);
+                else
+                    charFreq.put(word, 1); // COunting characters
+            }
+            } catch (IOException ex) {
+            return null; // Error Handling
         }
-        return numberOfLines;
+        return charFreq;
     }
-
-    }
-
 
 }
+
+
