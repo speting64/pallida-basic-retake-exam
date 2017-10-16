@@ -31,9 +31,12 @@ The application is accepted if:
 ## 4. Question time! (~10 mins) [4p]
 
 ###  What is inheritance? When would you use it? [2p]
-#### Your answer:
-[add your answer here]
 
+Inheritance in Java is a mechanism in which one object acquires every proprties (fields) and behaviors(methods) of the parent object. When you inherit from an existing class, you can reuse methods and fields of parent class, and you can add new methods and fields also. We use this solution : 
+a. for method overiding
+b. for code reusability
+
+The inheritance is initiated by the "extends" keyword , with which we can derive from an existing class when we create a new subclass
 
 ### Name each building block of a method! [2p]
 
@@ -41,11 +44,11 @@ The application is accepted if:
 
 #### Your answer:
 [add your answer here]   
-1:   
-2:   
-3:   
-4:   
-5:   
-6:   
-7:   
-8:
+1: signature
+2: return type
+3: name of the method  
+4: argument type 
+5: argument variable  
+6: local variable  
+7: body of the method  
+8: return statement
